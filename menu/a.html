@@ -1,0 +1,41 @@
+<style type="text/css">
+/* .s_1下面的m1和c1有.active,其他没有;
+	.s_2下面的m2和c2有.active,其他没有;
+	.s_3下面的m3和c3有.active,其他没有;
+	菜单有active才高亮，内容有active才显示
+	 */
+
+.tab-menu>li {
+    color: #666;
+}
+
+.tab-menu>li.active {
+    color: #ff0000;
+}
+
+.c1,
+.c2,
+.c3 {
+    display: none;
+}
+
+.s1 .c1,
+.s2 .c2,
+.s3 .c3 {
+    display: block;
+}
+</style>
+<div class="s_x">
+    <!--x in [1,2,3]-->
+    <ul class="tab-menu">
+        <li class="m1" data-class="s1">项目信息</li>
+        <li class="m2" data-class="s2">项目进展</li>
+        <li class="m3" data-class="s3">跟投人</li>
+    </ul>
+    <div class="proInfo c1">项目信息</div>
+    <div class="proProgress c2">项目进展</div>
+    <div class="proCast c3">跟投人</div>
+</div>
+<script type="text/javascript">
+/*.tab-menu>li onclick ->修改s_x的类为对应[取自$(this).data('class')]的s1||s2||s3,就能控制显示*/
+</script>
